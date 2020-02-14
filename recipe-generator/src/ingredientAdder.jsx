@@ -1,10 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 export default class IngredientAdder extends React.Component {
   state = {
-    ingredientInput: ''
+    ingredientInput: ""
   };
 
   render() {
@@ -36,7 +36,6 @@ export default class IngredientAdder extends React.Component {
     event.preventDefault();
     const { ingredientInput } = this.state;
     this.props.addIngredients(ingredientInput);
-    this.setState({ ingredientInput: '' });
-    this.props.returnRecipe();
+    this.setState({ ingredientInput: "" });
   };
 }

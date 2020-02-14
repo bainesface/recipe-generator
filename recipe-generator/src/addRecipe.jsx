@@ -1,6 +1,5 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 export default function Recipes(props) {
   const { recipes } = props;
@@ -8,9 +7,12 @@ export default function Recipes(props) {
     <ul>
       {Object.keys(recipes).map(recipe => {
         return (
-          recipes[recipe].screenView === 'visible' && (
+          recipes[recipe].screenView === "visible" && (
             <li key={recipes[recipe].name}>
-              {recipes[recipe].name} \br {recipes[recipe].ingredients}
+              <h3>{recipes[recipe].name}</h3>
+              <img src={recipes[recipe].url} />
+              <p>{recipes[recipe].ingredients}</p>
+              <p>{recipes[recipe].method}</p>
             </li>
           )
         );
