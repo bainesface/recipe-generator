@@ -86,7 +86,6 @@ class App extends React.Component {
         count > 2 &&
           this.setState(currentState => {
             console.log(count, "second");
-            count = 0;
             return {
               recipes: {
                 ...currentState.recipes,
@@ -97,6 +96,7 @@ class App extends React.Component {
               }
             };
           });
+        count = 0;
       }
     }
   };
